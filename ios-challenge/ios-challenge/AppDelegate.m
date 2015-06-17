@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#define kFlickAPIKey @"d2427bdc6ee8f3e43aab166ba44658de"
+#define KFlickAPISecretKey @"9a16da71de8fadba"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +19,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.flickrAPIContext = [[OFFlickrAPIContext alloc] initWithAPIKey:kFlickAPIKey sharedSecret:KFlickAPISecretKey];
+    
     return YES;
 }
 

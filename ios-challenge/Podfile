@@ -3,6 +3,8 @@
 
 target 'ios-challenge' do
 
+pod 'objectiveflickr'
+
 end
 
 target 'ios-challengeTests' do

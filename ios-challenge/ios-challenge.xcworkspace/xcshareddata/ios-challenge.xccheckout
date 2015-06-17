@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>35482BE3-FCF8-4943-B65B-B19C8324E855</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ios-challenge</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>247B9401DC6604717AD4F25A2252FB1C3E1EDAE9</key>
+		<string>https://github.com/gui-assis/ios-challenge.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios-challenge/ios-challenge.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>247B9401DC6604717AD4F25A2252FB1C3E1EDAE9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gui-assis/ios-challenge.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>247B9401DC6604717AD4F25A2252FB1C3E1EDAE9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>247B9401DC6604717AD4F25A2252FB1C3E1EDAE9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios-challenge</string>
+		</dict>
+	</array>
+</dict>
+</plist>

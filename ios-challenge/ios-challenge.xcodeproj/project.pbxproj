@@ -13,6 +13,9 @@
 		79C2336A1B310B700079B156 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C233691B310B700079B156 /* Images.xcassets */; };
 		79C2336D1B310B710079B156 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C2336B1B310B710079B156 /* LaunchScreen.xib */; };
 		79C233791B310B710079B156 /* ios_challengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C233781B310B710079B156 /* ios_challengeTests.m */; };
+		79C2338D1B3114810079B156 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2338C1B3114810079B156 /* PhotoDetailViewController.m */; };
+		79C233901B3114A30079B156 /* PhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2338F1B3114A30079B156 /* PhotoListViewController.m */; };
+		8B30B144E65F1AA97A7F3022 /* libPods-ios-challenge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0396D22AE009507E788C42F /* libPods-ios-challenge.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,13 @@
 		79C233721B310B710079B156 /* ios-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C233771B310B710079B156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79C233781B310B710079B156 /* ios_challengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_challengeTests.m; sourceTree = "<group>"; };
+		79C2338B1B3114810079B156 /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		79C2338C1B3114810079B156 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
+		79C2338E1B3114A30079B156 /* PhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoListViewController.h; sourceTree = "<group>"; };
+		79C2338F1B3114A30079B156 /* PhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoListViewController.m; sourceTree = "<group>"; };
+		A0396D22AE009507E788C42F /* libPods-ios-challenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-challenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB26B779DCEEA98397FFE4D1 /* Pods-ios-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-challenge/Pods-ios-challenge.release.xcconfig"; sourceTree = "<group>"; };
+		C767F0BFFC0C9488A4A4A9EF /* Pods-ios-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-challenge/Pods-ios-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B30B144E65F1AA97A7F3022 /* libPods-ios-challenge.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,12 +68,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53B1596F3D42F74B5D9553B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0396D22AE009507E788C42F /* libPods-ios-challenge.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		615F8A5A57AA3B0A2D0F6CC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C767F0BFFC0C9488A4A4A9EF /* Pods-ios-challenge.debug.xcconfig */,
+				BB26B779DCEEA98397FFE4D1 /* Pods-ios-challenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		79C2334D1B310B700079B156 = {
 			isa = PBXGroup;
 			children = (
 				79C233581B310B700079B156 /* ios-challenge */,
 				79C233751B310B710079B156 /* ios-challengeTests */,
 				79C233571B310B700079B156 /* Products */,
+				615F8A5A57AA3B0A2D0F6CC5 /* Pods */,
+				53B1596F3D42F74B5D9553B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +113,9 @@
 				79C233661B310B700079B156 /* Main.storyboard */,
 				79C233691B310B700079B156 /* Images.xcassets */,
 				79C2336B1B310B710079B156 /* LaunchScreen.xib */,
+				79C233821B3113800079B156 /* Models */,
+				79C233831B3113800079B156 /* Services */,
+				79C233841B3113800079B156 /* ViewControllers */,
 				79C233591B310B700079B156 /* Supporting Files */,
 			);
 			path = "ios-challenge";
@@ -114,6 +147,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		79C233821B3113800079B156 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		79C233831B3113800079B156 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		79C233841B3113800079B156 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				79C2338B1B3114810079B156 /* PhotoDetailViewController.h */,
+				79C2338C1B3114810079B156 /* PhotoDetailViewController.m */,
+				79C2338E1B3114A30079B156 /* PhotoListViewController.h */,
+				79C2338F1B3114A30079B156 /* PhotoListViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79C2337C1B310B710079B156 /* Build configuration list for PBXNativeTarget "ios-challenge" */;
 			buildPhases = (
+				61E8EE0B220B123F373DF81A /* Check Pods Manifest.lock */,
 				79C233521B310B700079B156 /* Sources */,
 				79C233531B310B700079B156 /* Frameworks */,
 				79C233541B310B700079B156 /* Resources */,
+				622377F97D7DED45ED4F3BCA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,12 +269,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		61E8EE0B220B123F373DF81A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		622377F97D7DED45ED4F3BCA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-challenge/Pods-ios-challenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		79C233521B310B700079B156 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				79C2335F1B310B700079B156 /* AppDelegate.m in Sources */,
+				79C233901B3114A30079B156 /* PhotoListViewController.m in Sources */,
+				79C2338D1B3114810079B156 /* PhotoDetailViewController.m in Sources */,
 				79C2335C1B310B700079B156 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +434,7 @@
 		};
 		79C2337D1B310B710079B156 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C767F0BFFC0C9488A4A4A9EF /* Pods-ios-challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ios-challenge/Info.plist";
@@ -349,6 +445,7 @@
 		};
 		79C2337E1B310B710079B156 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB26B779DCEEA98397FFE4D1 /* Pods-ios-challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ios-challenge/Info.plist";
@@ -410,6 +507,7 @@
 				79C2337E1B310B710079B156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79C2337F1B310B710079B156 /* Build configuration list for PBXNativeTarget "ios-challengeTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +516,7 @@
 				79C233811B310B710079B156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
