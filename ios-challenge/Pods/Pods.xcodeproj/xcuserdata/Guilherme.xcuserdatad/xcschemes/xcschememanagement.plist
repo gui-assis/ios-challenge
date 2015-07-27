@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-ios-challenge-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ios-challenge-objectiveflickr.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4D7C4FED8DB126DD48509DD3</key>
+		<key>11DA43182938ABB679DE1A34</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>921840B776E9A1049F415532</key>
+		<key>A985EEEA5D453AF77D20734B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E28A1221981F28F8EFF01665</key>
 		<dict>
 			<key>primary</key>
 			<true/>

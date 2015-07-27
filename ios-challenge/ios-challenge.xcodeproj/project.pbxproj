@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		792E80131B65BBC900351396 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792E80121B65BBC900351396 /* ImageCell.m */; };
+		792E80191B65BF3B00351396 /* PhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792E80181B65BF3B00351396 /* PhotoListViewController.m */; };
+		792E801B1B65C90500351396 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792E801A1B65C90500351396 /* QuartzCore.framework */; };
 		79C2335C1B310B700079B156 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2335B1B310B700079B156 /* main.m */; };
 		79C2335F1B310B700079B156 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2335E1B310B700079B156 /* AppDelegate.m */; };
 		79C233681B310B700079B156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C233661B310B700079B156 /* Main.storyboard */; };
@@ -14,7 +17,7 @@
 		79C2336D1B310B710079B156 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C2336B1B310B710079B156 /* LaunchScreen.xib */; };
 		79C233791B310B710079B156 /* ios_challengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C233781B310B710079B156 /* ios_challengeTests.m */; };
 		79C2338D1B3114810079B156 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2338C1B3114810079B156 /* PhotoDetailViewController.m */; };
-		79C233901B3114A30079B156 /* PhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C2338F1B3114A30079B156 /* PhotoListViewController.m */; };
+		79C233941B3116710079B156 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C233931B3116710079B156 /* AppHelper.m */; };
 		8B30B144E65F1AA97A7F3022 /* libPods-ios-challenge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0396D22AE009507E788C42F /* libPods-ios-challenge.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		792E80111B65BBC900351396 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		792E80121B65BBC900351396 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		792E80171B65BF3B00351396 /* PhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoListViewController.h; sourceTree = "<group>"; };
+		792E80181B65BF3B00351396 /* PhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoListViewController.m; sourceTree = "<group>"; };
+		792E801A1B65C90500351396 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		79C233561B310B700079B156 /* ios-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C2335A1B310B700079B156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79C2335B1B310B700079B156 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,8 +50,8 @@
 		79C233781B310B710079B156 /* ios_challengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_challengeTests.m; sourceTree = "<group>"; };
 		79C2338B1B3114810079B156 /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
 		79C2338C1B3114810079B156 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
-		79C2338E1B3114A30079B156 /* PhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoListViewController.h; sourceTree = "<group>"; };
-		79C2338F1B3114A30079B156 /* PhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoListViewController.m; sourceTree = "<group>"; };
+		79C233921B3116710079B156 /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHelper.h; sourceTree = "<group>"; };
+		79C233931B3116710079B156 /* AppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHelper.m; sourceTree = "<group>"; };
 		A0396D22AE009507E788C42F /* libPods-ios-challenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-challenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB26B779DCEEA98397FFE4D1 /* Pods-ios-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-challenge/Pods-ios-challenge.release.xcconfig"; sourceTree = "<group>"; };
 		C767F0BFFC0C9488A4A4A9EF /* Pods-ios-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-challenge/Pods-ios-challenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792E801B1B65C90500351396 /* QuartzCore.framework in Frameworks */,
 				8B30B144E65F1AA97A7F3022 /* libPods-ios-challenge.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +80,7 @@
 		53B1596F3D42F74B5D9553B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				792E801A1B65C90500351396 /* QuartzCore.framework */,
 				A0396D22AE009507E788C42F /* libPods-ios-challenge.a */,
 			);
 			name = Frameworks;
@@ -83,6 +93,15 @@
 				BB26B779DCEEA98397FFE4D1 /* Pods-ios-challenge.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		792E80101B65BBB900351396 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				792E80111B65BBC900351396 /* ImageCell.h */,
+				792E80121B65BBC900351396 /* ImageCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		79C2334D1B310B700079B156 = {
@@ -113,6 +132,8 @@
 				79C233661B310B700079B156 /* Main.storyboard */,
 				79C233691B310B700079B156 /* Images.xcassets */,
 				79C2336B1B310B710079B156 /* LaunchScreen.xib */,
+				792E80101B65BBB900351396 /* Views */,
+				79C233911B3116600079B156 /* Helper */,
 				79C233821B3113800079B156 /* Models */,
 				79C233831B3113800079B156 /* Services */,
 				79C233841B3113800079B156 /* ViewControllers */,
@@ -166,10 +187,19 @@
 			children = (
 				79C2338B1B3114810079B156 /* PhotoDetailViewController.h */,
 				79C2338C1B3114810079B156 /* PhotoDetailViewController.m */,
-				79C2338E1B3114A30079B156 /* PhotoListViewController.h */,
-				79C2338F1B3114A30079B156 /* PhotoListViewController.m */,
+				792E80171B65BF3B00351396 /* PhotoListViewController.h */,
+				792E80181B65BF3B00351396 /* PhotoListViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		79C233911B3116600079B156 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				79C233921B3116710079B156 /* AppHelper.h */,
+				79C233931B3116710079B156 /* AppHelper.m */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +337,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C233941B3116710079B156 /* AppHelper.m in Sources */,
+				792E80131B65BBC900351396 /* ImageCell.m in Sources */,
 				79C2335F1B310B700079B156 /* AppDelegate.m in Sources */,
-				79C233901B3114A30079B156 /* PhotoListViewController.m in Sources */,
+				792E80191B65BF3B00351396 /* PhotoListViewController.m in Sources */,
 				79C2338D1B3114810079B156 /* PhotoDetailViewController.m in Sources */,
 				79C2335C1B310B700079B156 /* main.m in Sources */,
 			);

@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) OFFlickrAPIContext *flickrAPIContext;
+@property (strong, nonatomic) NSString *apiKey;
+@property (strong, nonatomic) NSString *apiSecretKey;
 
 @end
 

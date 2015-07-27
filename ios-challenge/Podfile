@@ -4,6 +4,7 @@
 target 'ios-challenge' do
 
 pod 'objectiveflickr'
+pod 'AFNetworking', '~> 2.0'
 
 end
 

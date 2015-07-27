@@ -508,8 +508,11 @@ typedef unsigned int NSUInteger;
     
     if (requestURL) {
         [HTTPRequest setContentType:nil];
-        return [HTTPRequest performMethod:LFHTTPRequestGETMethod onURL:requestURL withData:nil];        
+        [HTTPRequest setShouldWaitUntilDone:YES];
+        BOOL requestResult = [HTTPRequest performMethod:LFHTTPRequestGETMethod onURL:requestURL withData:nil];
+        return requestResult;
     }
+    
     return NO;
 }
 

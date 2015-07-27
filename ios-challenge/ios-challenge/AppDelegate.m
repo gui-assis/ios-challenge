@@ -22,6 +22,9 @@
     
     self.flickrAPIContext = [[OFFlickrAPIContext alloc] initWithAPIKey:kFlickAPIKey sharedSecret:KFlickAPISecretKey];
     
+    self.apiKey = kFlickAPIKey;
+    self.apiSecretKey = KFlickAPISecretKey;
+    
     return YES;
 }
 
