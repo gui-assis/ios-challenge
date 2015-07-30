@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <objectiveflickr/ObjectiveFlickr.h>
+#import "PhotoService.h"
+#import "UIImageView+AFNetworking.h"
 
-@interface PhotoListViewController : UITableViewController<OFFlickrAPIRequestDelegate>
+@interface PhotoListViewController : UITableViewController<PhotoServiceDelegate>
 
 @end

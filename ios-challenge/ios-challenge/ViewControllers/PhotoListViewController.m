@@ -9,15 +9,16 @@
 #import "PhotoListViewController.h"
 #import "AppHelper.h"
 #import "ImageCell.h"
-#import "UIImageView+AFNetworking.h"
+#import "Photo.h"
+#import "PhotoDetailViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface PhotoListViewController ()
 
-@property (nonatomic, strong) OFFlickrAPIContext *flickrContext;
-@property (nonatomic, strong) OFFlickrAPIRequest *flickrRequestPhotos;
-@property (nonatomic, strong) OFFlickrAPIRequest *flickrRequestPhotoInfo;
-
-@property (nonatomic, strong) NSMutableArray *arrayImages;
+@property (nonatomic, strong) NSMutableArray *arrayPhotos;
+@property (nonatomic) int currentPage;
+@property (nonatomic, strong) PhotoService *photoService;
+@property (nonatomic, strong) MBProgressHUD *hud;
 
 @end
 
@@ -26,39 +27,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.arrayImages = [NSMutableArray new];
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.mode = MBProgressHUDModeIndeterminate;
+    self.hud.labelText = @"Carregando";
+    
+    [self.hud show:YES];
+    
+    self.photoService = [PhotoService new];
+    self.photoService.delegate = self;
+    
+    self.currentPage = 1;
+    
+    self.arrayPhotos = [NSMutableArray new];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    self.flickrContext = [[OFFlickrAPIContext alloc] initWithAPIKey:@"d2427bdc6ee8f3e43aab166ba44658de" sharedSecret:@"9a16da71de8fadba"];
-    
-    self.flickrRequestPhotos = [[OFFlickrAPIRequest alloc] initWithAPIContext:self.flickrContext];
-    self.flickrRequestPhotos.delegate = self;
-    
-    self.flickrRequestPhotoInfo = [[OFFlickrAPIRequest alloc] initWithAPIContext:self.flickrContext];
-    self.flickrRequestPhotoInfo.delegate = self;
-    
-    [self.flickrRequestPhotos callAPIMethodWithGET:@"flickr.photos.getRecent" arguments:[NSDictionary dictionaryWithObjectsAndKeys:@"100", @"per_page", nil]];
+    [self loadPhotos];
 }
 
-#pragma mark - FlickrAPIDelegate
+-(void) loadPhotos{
+    [self.photoService getRecentPhotosWithPage:self.currentPage];
+}
 
--(void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest didCompleteWithResponse:(NSDictionary *)inResponseDictionary{
-
-    NSDictionary *photosDict = [inResponseDictionary valueForKeyPath:@"photos.photo"];
-    
-    for (NSDictionary *photoDict in photosDict) {
-        [self.arrayImages addObject:photoDict];
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"segueToPhotoDetail"]) {
+        PhotoDetailViewController *photoDetailVC = (PhotoDetailViewController*) segue.destinationViewController;
+        photoDetailVC.photo = (Photo*) sender;
     }
-    
+}
+
+#pragma mark - PhotoServiceDelegate
+
+-(void)didLoadPhotos:(NSArray *)photos{
+    [self.hud hide:YES];
+    [self.arrayPhotos addObjectsFromArray:photos];
     [self.tableView reloadData];
 }
 
--(void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest didFailWithError:(NSError *)inError{
-    NSLog(@"%@", [inError localizedDescription]);
+-(void)didLoadPhotoDetails:(PhotoDetail *)photoDetail{
+    
 }
 
 #pragma mark - Table view data source
@@ -68,21 +80,39 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.arrayImages count];
+    return [self.arrayPhotos count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ImageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ImageCell" forIndexPath:indexPath];
     
-    NSDictionary *photoDict = [self.arrayImages objectAtIndex:indexPath.row];
+    Photo *photo = [self.arrayPhotos objectAtIndex:indexPath.row];
     
-    NSURL *staticPhotoURL = [self.flickrContext photoSourceURLFromDictionary:photoDict size:OFFlickrSmallSize];
+    NSURL *photoUrl = [NSURL URLWithString:photo.thumbNailUrl];
     
-    [cell.photoImageView setImageWithURL:staticPhotoURL placeholderImage:[UIImage imageNamed:@"placeholder"]];
-    cell.labelTitle.text = [photoDict objectForKey:@"title"];
+    [cell.photoImageView setImageWithURL:photoUrl placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    
+    cell.labelTitle.text = photo.title;
+    cell.labelSubTitle.text = photo.ownerName;
+    
+    if (indexPath.row == [self.arrayPhotos count] - 1)
+    {
+        self.currentPage++;
+        [self loadPhotos];
+    }
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.hud show:YES];
+    Photo *photo = [self.arrayPhotos objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"segueToPhotoDetail" sender:photo];
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

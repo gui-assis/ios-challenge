@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ios-challenge-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ios-challenge-Mantle.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ios-challenge-objectiveflickr.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>11DA43182938ABB679DE1A34</key>
+		<key>56F371EB008A2CCA46D0DA45</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A985EEEA5D453AF77D20734B</key>
+		<key>93F1AD9D562DC134E2D5041F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E28A1221981F28F8EFF01665</key>
+		<key>94EA954CECB927422C487CB5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BEBA5BF593A67353405DDB15</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF8042549603D82121A3FC18</key>
 		<dict>
 			<key>primary</key>
 			<true/>
